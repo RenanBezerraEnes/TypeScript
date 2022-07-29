@@ -19,3 +19,7 @@ const multiply = function(a:number, b: number): number {
 const logger = (message: string): void => {
     console.log(message)
 }
+
+const error = (message: string): never => {
+    throw new Error(message);
+}
