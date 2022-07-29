@@ -23,3 +23,10 @@ const logger = (message: string): void => {
 const error = (message: string): never => {
     throw new Error(message);
 }
+
+const throwError = (message: string): string => {
+    if(!message) {
+        throw new Error(message);
+    }
+    return message
+}
