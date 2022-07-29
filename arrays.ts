@@ -18,3 +18,11 @@ carMakers.map((car:string): string => {
     return car.toLocaleUpperCase()
 })
 
+// Flexible types
+const importantDates: (Date | string)[] = [new Date(), "2030-10-10"]
+importantDates.push("2050-10-10")
+importantDates.push(new Date())
+
+// importantDates.push(1221) -> in this case it will return a error 
+// because number type is not defined in the variable importantDates
+
