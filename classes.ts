@@ -1,7 +1,6 @@
 class Vehicle{
     // Special function for arguments -> line 11
-    constructor(public color: string) {
-    }
+    constructor(public color: string) {}
 
     protected honk(): void {
         console.log("VOID VOID")
@@ -13,6 +12,10 @@ console.log(vehicle.color);
 
 
 class Car extends Vehicle {
+    constructor(public wheels: number, color: string){
+        super(color)
+    }
+
     private drive(): void {
     console.log("RUM RUM")
    }
@@ -27,6 +30,6 @@ class Car extends Vehicle {
 // vehicle.drive()
 // vehicle.honk()
 
-const car = new Car()
+const car = new Car(4, "BLUE")
 car.startDriven()
 // car.honk()
