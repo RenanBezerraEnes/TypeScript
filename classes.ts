@@ -8,7 +8,9 @@ class Vehicle{
 }
 
 class Car extends Vehicle {
-   
+   drive(): void {
+    console.log("RUM RUM")
+   }
 }
 
 // const vehicle = new Vehicle()
