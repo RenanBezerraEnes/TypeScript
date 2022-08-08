@@ -46,3 +46,6 @@ function printAnything<T>(arr: T[]):void {
         console.log(arr[i])   
     }
 }
+
+printAnything<string>(['a', 'b', 'c'])
+printAnything<number>([2,4,5])
