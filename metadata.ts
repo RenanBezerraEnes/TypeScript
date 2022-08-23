@@ -20,14 +20,16 @@ import 'reflect-metadata'
 class Plane {
     color:string = 'red'
 
-    @markFunction
+    @markFunction('hi there')
     fly():void {
         console.log('FLYING')
     }
 }
 
-function markFunction(target: Plane, key: string) {
-    Reflect.defineMetadata('secret', 123, target, key)
+function markFunction(secretInfo: string) {
+    return function(target: Plane, key: string) {
+        Reflect.defineMetadata('secret', secretInfo, target, key)
+    }
 }
 
 const secret = Reflect.getMetadata('secret', Plane.prototype, 'fly')
